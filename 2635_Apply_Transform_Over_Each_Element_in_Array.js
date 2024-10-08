@@ -37,9 +37,8 @@
  * @return {number[]}
  */
 var map = function (arr, fn) {
-    let resArr = []
     for (let i = 0; i < arr.length; i++) {
-        resArr.push(fn(arr[i], i))
+        arr[i] = fn(arr[i], i);
     }
-    return resArr
+    return arr
 };
